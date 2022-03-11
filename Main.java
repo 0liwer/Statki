@@ -4,9 +4,6 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    //final char markX = 88;
-    //final char markM = 77;
-    //final char markO = 79;
 
     public static void main(String[] args) {
         Player1 player1 = new Player1();
@@ -36,23 +33,20 @@ public class Main {
         actions.player1PlacingShips();
         System.out.println();
         tools.promptEnterKey();
-        //System.out.println("Press Enter and pass the move to another player");
 
         System.out.println("Player 2, place your ships on the game field:");
         System.out.println();
         actions.showGameField(Player2.player2Array);
         actions.player2PlacingShips();
         System.out.println();
-        //System.out.println("Press Enter and pass the move to another player");
         tools.promptEnterKey();
 
-        //BATTLE//
+        //STARTING BATTLE//
         int rounds = 1;
 
         actions.createGameField(Player1.player1ArrayFog);
         actions.createGameField(Player2.player2ArrayFog);
 
-        //boolean p1a = false;
         boolean werePlayer2AircraftSunkenShown = false;
         boolean werePlayer2BattleshipSunkenShown = false;
         boolean werePlayer2SubmarineSunkenShown = false;
@@ -104,7 +98,6 @@ public class Main {
                             System.out.println("You hit a ship!");
                         }
                         tools.promptEnterKey();
-                        //System.out.println("Press Enter and pass the move to another player");
                     }
                 }
                 rounds++;
@@ -145,7 +138,6 @@ public class Main {
                             System.out.println("You hit a ship!");
                         }
                         tools.promptEnterKey();
-                        //System.out.println("Press Enter and pass the move to another player");
                     }
                 }
                 rounds++;
@@ -195,8 +187,6 @@ class Actions {
                 array[i][j] = 126;
             }
         }
-
-        //return array;
     }
 
     void showGameField(char[][] array) {
@@ -225,7 +215,7 @@ class Actions {
         if (litt1 != litt2 && x1 == x2) { //pion
             if (litt1 < litt2) { // w dół
                 for (int i = 0; i < dlugoscPion + 1; i++) {
-                    array[litt2 - i][x1] = 79; //79
+                    array[litt2 - i][x1] = 79;
                 }
             } else { // w górę
                 for (int i = 0; i < dlugoscPion + 1; i++) {
@@ -243,7 +233,6 @@ class Actions {
                 }
             }
         }
-        //return array;
     }
 
     boolean checkSurroundings(char[][] array, int litt1, int x1, int litt2, int x2) {
@@ -682,7 +671,6 @@ class Actions {
     }
 
     void player2PlacingShips() {
-        //String letters = "ABCDEFGHIJ";
         String shipArray[] = new String[5];
         shipArray[0] = "Aircraft Carrier (5 cells)";
         shipArray[1] = "Battleship (4 cells)";
