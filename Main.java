@@ -513,7 +513,7 @@ class Actions {
                 litt2 = tools.toolStringToInt(Character.toString(stringInput.charAt(3)));
                 x2 = Integer.parseInt(Character.toString(stringInput.charAt(4)));
             } else {
-                System.out.println("Error, Input nie pasuje kurwa");
+                System.out.println("Error, incorrect input!");
             }
 
             x1 = x1 - 1;
@@ -576,7 +576,7 @@ class Actions {
                 targetLitt = tools.toolStringToInt(Character.toString(input.charAt(0)));
                 targetX = Integer.parseInt(Character.toString(input.charAt(1)));
             } else if (input.length() < 2) {
-                System.out.println("Error! Wrong coordinates!FUCK Try again: ");
+                System.out.println("Error! Wrong coordinates!");
                 System.out.println();
                 continue;
             }
@@ -634,14 +634,14 @@ class Actions {
                 targetX = Integer.parseInt(Character.toString(input.charAt(1)));
             } else if (input.length() < 2) {
                 System.out.println(input);
-                System.out.println("Error! Wrong coordinates!FUCK Try again: ");
+                System.out.println("Error! Wrong coordinates! Try again: ");
                 System.out.println();
                 continue;
             }
             targetX = targetX - 1;
 
             if (targetLitt > 9 || targetLitt < 0 || targetX < 0 || targetX > 9) {
-                System.out.println("Error! Coordinates outside FUCK board! Try again: ");
+                System.out.println("Error! Coordinates outside board! Try again: ");
                 System.out.println();
             } else if (Player1.player1Array[targetLitt][targetX] == 77 || Player1.player1Array[targetLitt][targetX] == 88) {
                 System.out.println("Already shot there");
@@ -721,7 +721,7 @@ class Actions {
                 litt2 = tools.toolStringToInt(Character.toString(stringInput.charAt(3)));
                 x2 = Integer.parseInt(Character.toString(stringInput.charAt(4)));
             } else {
-                System.out.println("Error, Input nie pasuje kurwa");
+                System.out.println("Error, incorrect input");
             }
 
             x1 = x1 - 1;
